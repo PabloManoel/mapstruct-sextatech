@@ -1,5 +1,6 @@
 package mapper;
 
+import org.example.dto.DocumentoDTO;
 import org.example.dto.FuncionarioDTO;
 import org.example.entity.FuncionarioEntity;
 import org.example.mapper.FuncionarioMapper;
@@ -38,5 +39,24 @@ public class FuncionarioMapperTest {
         assertEquals("Pedro", funcionarioDTO.getNome());
         assertEquals("Backend developer", funcionarioDTO.getCargo());
         assertEquals(5.000, funcionarioDTO.getSalario());
+    }
+
+    @Test
+    @DisplayName("Deve converter dto DocumentoDTO para entity DocumentoEntity")
+    public void shouldMapDocumentoDTOtoDocumentoEntity(){
+
+        DocumentoDTO documento = new DocumentoDTO();
+        documento.setRg("11.111.111-1");
+        documento.setCpf("222.222.222-22");
+
+        FuncionarioDTO funcionarioDTO = new FuncionarioDTO();
+        funcionarioDTO.setNome("Pedro");
+        funcionarioDTO.setDocumento(documento);
+
+        var funcionarioEntity = FuncionarioMapper.INSTANCE.toEntity(funcionarioDTO);
+
+        assertEquals("Pedro", funcionarioEntity.getNome());
+        assertEquals("11.111.111-1", funcionarioEntity.getDocumento().getRg());
+        assertEquals("222.222.222-22", funcionarioEntity.getDocumento().getCpf());
     }
 }
