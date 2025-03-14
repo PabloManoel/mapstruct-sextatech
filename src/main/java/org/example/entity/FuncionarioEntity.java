@@ -2,6 +2,8 @@ package org.example.entity;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class FuncionarioEntity {
 
@@ -10,4 +12,5 @@ public class FuncionarioEntity {
     private String funcao;
     private Double salario;
     private DocumentoEntity documento;
+    private List<DependenteEntity> dependentes;
 }

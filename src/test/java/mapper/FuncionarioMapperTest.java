@@ -1,11 +1,14 @@
 package mapper;
 
+import org.example.dto.DependenteDTO;
 import org.example.dto.DocumentoDTO;
 import org.example.dto.FuncionarioDTO;
 import org.example.entity.FuncionarioEntity;
 import org.example.mapper.FuncionarioMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -58,5 +61,25 @@ public class FuncionarioMapperTest {
         assertEquals("Pedro", funcionarioEntity.getNome());
         assertEquals("111111111", funcionarioEntity.getDocumento().getRg());
         assertEquals("22222222222", funcionarioEntity.getDocumento().getCpf());
+    }
+
+    @Test
+    @DisplayName("Deve converter dto DependenteDTO para entity DependenteEntity")
+    public void shouldMapDependenteDTOtoDependenteEntity() {
+        DependenteDTO dependenteDTO = new DependenteDTO();
+        dependenteDTO.setNome("Ana");
+        dependenteDTO.setGrauParentesco("Filho");
+
+        FuncionarioDTO funcionarioDTO = new FuncionarioDTO();
+        funcionarioDTO.setNome("Pedro");
+        funcionarioDTO.setDependentes(Arrays.asList(dependenteDTO));
+
+        var funcionarioEntity = FuncionarioMapper.INSTANCE.toEntity(funcionarioDTO);
+
+        assertEquals("Pedro", funcionarioEntity.getNome());
+
+        assertEquals(1, funcionarioEntity.getDependentes().size());
+        assertEquals("Ana", funcionarioEntity.getDependentes().get(0).getNome());
+        assertEquals("Filho", funcionarioEntity.getDependentes().get(0).getGrauParentesco());
     }
 }
