@@ -1,0 +1,52 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+logs/
+log/
+
+# Eclipse
+.settings/
+.classpath
+.project
+.metadata/
+bin/
+
+# VS Code
+.vscode/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Lombok cache
+.lombok/
+
+# Arquivos gerados por testes
+test-output/
+surefire-reports/
+failsafe-reports/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
