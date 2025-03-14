@@ -46,8 +46,8 @@ public class FuncionarioMapperTest {
     public void shouldMapDocumentoDTOtoDocumentoEntity(){
 
         DocumentoDTO documento = new DocumentoDTO();
-        documento.setRg("11.111.111-1");
-        documento.setCpf("222.222.222-22");
+        documento.setRg("111111111");
+        documento.setCpf("22222222222");
 
         FuncionarioDTO funcionarioDTO = new FuncionarioDTO();
         funcionarioDTO.setNome("Pedro");
@@ -56,7 +56,7 @@ public class FuncionarioMapperTest {
         var funcionarioEntity = FuncionarioMapper.INSTANCE.toEntity(funcionarioDTO);
 
         assertEquals("Pedro", funcionarioEntity.getNome());
-        assertEquals("11.111.111-1", funcionarioEntity.getDocumento().getRg());
-        assertEquals("222.222.222-22", funcionarioEntity.getDocumento().getCpf());
+        assertEquals("111111111", funcionarioEntity.getDocumento().getRg());
+        assertEquals("22222222222", funcionarioEntity.getDocumento().getCpf());
     }
 }

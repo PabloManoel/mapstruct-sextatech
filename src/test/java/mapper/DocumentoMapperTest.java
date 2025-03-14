@@ -22,8 +22,8 @@ public class DocumentoMapperTest {
 
         var documentoEntity = DocumentoMapper.INSTANCE.toEntity(documentoDTO);
 
-        assertEquals("11.111.111-1", documentoEntity.getRg());
-        assertEquals("222.222.222-22", documentoEntity.getCpf());
+        assertEquals("111111111", documentoEntity.getRg());
+        assertEquals("22222222222", documentoEntity.getCpf());
     }
 
 }
