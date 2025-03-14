@@ -59,6 +59,7 @@ Cada branch representa um **passo evolutivo** no aprendizado do MapStruct.
    ```
 
 ## 📚 Referências
+- [Medium "MapStruct: Simplificando mapeamento de DTOs em Java"](https://medium.com/mobicareofficial/mapstruct-simplificando-mapeamento-de-dtos-em-java-c29135835c68)
 - [Documentação Oficial do MapStruct](https://mapstruct.org/)
 - [MapStruct no GitHub](https://github.com/mapstruct/mapstruct)
 
