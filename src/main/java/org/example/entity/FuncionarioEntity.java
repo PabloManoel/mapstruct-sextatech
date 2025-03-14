@@ -6,6 +6,6 @@ import lombok.Data;
 public class FuncionarioEntity {
 
     private String nome;
-    private String cargo;
+    private String funcao;
     private Double salario;
 }

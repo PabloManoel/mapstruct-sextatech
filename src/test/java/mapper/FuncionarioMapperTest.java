@@ -21,7 +21,7 @@ public class FuncionarioMapperTest {
         var funcionarioEntity = FuncionarioMapper.INSTANCE.toEntity(funcionarioDTO);
 
         assertEquals("Pedro", funcionarioEntity.getNome());
-        assertEquals("Backend developer", funcionarioEntity.getCargo());
+        assertEquals("Backend developer", funcionarioEntity.getFuncao());
         assertEquals(5.000, funcionarioEntity.getSalario());
     }
 
@@ -30,7 +30,7 @@ public class FuncionarioMapperTest {
     public void shouldMapFuncionarioEntitytoFuncionarioDTO(){
         FuncionarioEntity funcionarioEntity = new FuncionarioEntity();
         funcionarioEntity.setNome("Pedro");
-        funcionarioEntity.setCargo("Backend developer");
+        funcionarioEntity.setFuncao("Backend developer");
         funcionarioEntity.setSalario(5.000);
 
         var funcionarioDTO = FuncionarioMapper.INSTANCE.toDTO(funcionarioEntity);
