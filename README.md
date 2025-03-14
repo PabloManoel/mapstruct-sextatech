@@ -2,6 +2,10 @@
 
 Este repositório contém uma aplicação Java simples com o objetivo de ensinar conceitos do **MapStruct** para o time. O projeto foi organizado em diferentes **branches**, cada uma abordando um aspecto específico do uso do MapStruct.
 
+## Porque MapsStruct?
+
+Segundo a documentação oficial, o MapStruct é um gerador de código que simplifica bastante a implementação de mapeamentos entre tipos de bean Java com base em uma abordagem de convenção sobre configuração. O código de mapeamento gerado usa invocações simples de método e, portanto, é rápido, seguro e fácil de entender.
+
 ## 🚀 Tecnologias Utilizadas
 
 - **Java**  
