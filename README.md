@@ -63,6 +63,12 @@ Cada branch representa um **passo evolutivo** no aprendizado do MapStruct.
 - [Documentação Oficial do MapStruct](https://mapstruct.org/)
 - [MapStruct no GitHub](https://github.com/mapstruct/mapstruct)
 
+
+## 👨‍💻 Sobre Mim
+
+#### 📌 [LinkedIn](linkedin.com/in/pablo-manoel/)&nbsp;&nbsp; |&nbsp;&nbsp; ✍ [Medium](medium.com/@pablo.manoel)
+
 ---
 Projeto criado por **Pablo Manoel** para fins educacionais no **SextaTech** da ZUP Innovation. 🚀
+
 
