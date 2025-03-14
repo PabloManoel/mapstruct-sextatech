@@ -13,7 +13,7 @@ public interface DocumentoMapper {
 
     DocumentoMapper INSTANCE = Mappers.getMapper(DocumentoMapper.class);
 
-    DocumentoEntity toEntity(DocumentoDTO funcionarioDTO);
+    DocumentoEntity toEntity(DocumentoDTO documentoDTO);
 
-    DocumentoDTO toDTO(DocumentoEntity funcionarioEntity);
+    DocumentoDTO toDTO(DocumentoEntity documentoEntity);
 }
